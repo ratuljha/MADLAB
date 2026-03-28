@@ -1,0 +1,11 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="20dp">
+    <Button android:id="@+id/btnDate" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="Select Date" /> <Button android:id="@+id/btnTime" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:text="Select Time" />
+    <TextView android:id="@+id/tvDt" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Not Selected" />
+    <Button android:id="@+id/btnNext4" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="Go to Summary" />
+</LinearLayout>

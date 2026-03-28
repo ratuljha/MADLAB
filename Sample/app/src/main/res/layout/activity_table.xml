@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp">
+    <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:stretchColumns="1"> <TableRow>
+        <TextView android:text="Student Name: " android:textStyle="bold" />
+        <TextView android:id="@+id/tvDispName" />
+    </TableRow>
+        <TableRow>
+            <TextView android:text="Student ID: " android:textStyle="bold" />
+            <TextView android:id="@+id/tvDispId" />
+        </TableRow>
+    </TableLayout>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="\nUse the Options Menu at the top to proceed." />
+</LinearLayout>

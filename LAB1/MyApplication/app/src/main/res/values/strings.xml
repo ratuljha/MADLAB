@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="text_demo_title">Text Customization Demo</string>
+    <string name="justified_text_label">1. Justified Text:</string>
+    <string name="justified_text_content">This is a long paragraph intended to demonstrate text justification. By setting the justification mode to inter_word, the spaces between words are adjusted so that both the left and right edges of the text block are straight. This is common in newspapers and books.</string>
+    <string name="colored_text_label">2. Colored Text:</string>
+    <string name="red_text">This text is red.</string>
+    <string name="green_text">This text is green.</string>
+    <string name="blue_text">This text is blue.</string>
+    <string name="fonts_label">3. Custom Fonts (Built-in):</string>
+    <string name="monospace_text">This is Monospace font.</string>
+    <string name="serif_text">This is Serif font.</string>
+    <string name="sans_serif_text">This is Sans-Serif font.</string>
+</resources>

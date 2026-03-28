@@ -1,0 +1,10 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="20dp">
+    <TextView android:text="Page 3: Preferences" android:textSize="18sp" />
+    <CheckBox android:id="@+id/cbSports" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:text="Sports" /> <CheckBox android:id="@+id/cbMusic" android:layout_width="wrap_content"
+    android:layout_height="wrap_content" android:text="Music" />
+    <Button android:id="@+id/btnNext3" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="Next to Pickers" />
+</LinearLayout>
