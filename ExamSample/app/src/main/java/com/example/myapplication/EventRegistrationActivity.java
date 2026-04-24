@@ -177,4 +177,10 @@ public class EventRegistrationActivity extends AppCompatActivity {
                 eventDisplayList);
         listViewEvents.setAdapter(adapter);
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        myDB.close();
+    }
 }

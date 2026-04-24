@@ -37,13 +37,15 @@ import java.util.ArrayList;
 
 public class SummaryActivity extends AppCompatActivity {
 
+    DBHelper myDB;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_summary);
 
         // Step 1: Initialize
-        DBHelper myDB = new DBHelper(this);
+        myDB = new DBHelper(this);
         String userEmail = getIntent().getStringExtra("USER_EMAIL");
 
         // Step 2: Display user info
@@ -119,5 +121,11 @@ public class SummaryActivity extends AppCompatActivity {
          * }
          * tvDetails.setText(sb.toString());
          */
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        myDB.close();
     }
 }

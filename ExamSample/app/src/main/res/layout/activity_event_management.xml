@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
     PAGE 2 LAYOUT: Event Management Screen
-    This is like your LAB8 AddTaskActivity layout but with more fields.
 
-    TO MODIFY:
-    - Change/add/remove EditTexts based on what fields the question asks for
-    - Each EditText needs a UNIQUE android:id (e.g., @+id/etWhatever)
-    - Match the id names in your Java code's findViewById()
+    DATE & TIME use Button + TextView combos (like LAB8 Q1 AddTaskActivity):
+    - User clicks the button → Picker dialog opens → selected value shows in TextView
+
+    TO SWITCH BACK TO PLAIN EDITTEXT (if question doesn't want pickers):
+    - Delete the LinearLayout containing btnPickDate/tvDate (or btnPickTime/tvTime)
+    - Uncomment the plain EditText versions below them
+    - In Java: use etDate.getText().toString() instead of selectedDate variable
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -23,7 +25,7 @@
         android:textStyle="bold"
         android:layout_marginBottom="20dp"/>
 
-    <!-- Serial Number (the unique identifier to find/update events) -->
+    <!-- Serial Number -->
     <EditText
         android:id="@+id/etSerialNo"
         android:layout_width="match_parent"
@@ -39,36 +41,72 @@
         android:hint="Event Name"
         android:layout_marginBottom="10dp"/>
 
-    <!-- Event Date -->
-    <EditText
-        android:id="@+id/etEventDate"
+    <!-- ═══ DATE PICKER (Button + TextView) ═══ -->
+    <!-- Same pattern as LAB8 Q1: btnPickDate opens dialog, tvDate shows result -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Event Date (e.g. 25/04/2026)"
-        android:layout_marginBottom="10dp"/>
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/btnPickDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick Date"/>
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No date selected"
+            android:layout_marginStart="15dp"
+            android:textSize="16sp"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
 
     <!--
-        BONUS: If you want a DatePicker instead of plain text (like LAB8 Q1):
-
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:orientation="horizontal" android:layout_marginBottom="10dp">
-            <Button android:id="@+id/btnPickDate" android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:text="Pick Date"/>
-            <TextView android:id="@+id/tvDate" android:layout_width="wrap_content"
-                android:layout_height="wrap_content" android:text="Not Selected"
-                android:layout_marginStart="15dp" android:textSize="16sp"/>
-        </LinearLayout>
-
-        Then in Java, use DatePickerDialog like LAB8 Q1 AddTaskActivity.
+        ═══ PLAIN EDITTEXT VERSION (uncomment if question doesn't want picker) ═══
+        <EditText
+            android:id="@+id/etEventDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Event Date (e.g. 25/04/2026)"
+            android:layout_marginBottom="10dp"/>
     -->
 
-    <!-- Event Time -->
-    <EditText
-        android:id="@+id/etEventTime"
+    <!-- ═══ TIME PICKER (Button + TextView) ═══ -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Event Time (e.g. 10:00 AM)"
-        android:layout_marginBottom="10dp"/>
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <Button
+            android:id="@+id/btnPickTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pick Time"/>
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No time selected"
+            android:layout_marginStart="15dp"
+            android:textSize="16sp"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+
+    <!--
+        ═══ PLAIN EDITTEXT VERSION (uncomment if question doesn't want picker) ═══
+        <EditText
+            android:id="@+id/etEventTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Event Time (e.g. 10:00 AM)"
+            android:layout_marginBottom="10dp"/>
+    -->
 
     <!-- Event Location -->
     <EditText

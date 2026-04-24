@@ -104,4 +104,17 @@ public class MainActivity extends AppCompatActivity {
          * Don't forget to add <activity android:name=".RegisterActivity" /> in AndroidManifest.xml
          */
     }
+
+    /*
+     * onDestroy() — called when this Activity is being killed.
+     * We close the database connection here to free resources.
+     * ALWAYS add this in every Activity that uses DBHelper.
+     *
+     * Copy-paste this block into any Activity that has: DBHelper myDB;
+     */
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        myDB.close();   // Close database connection
+    }
 }
