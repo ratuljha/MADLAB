@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    AndroidManifest.xml — EVERY Activity MUST be declared here or the app will crash!
+
+    RULES:
+    1. The LAUNCHER activity (first screen) has the <intent-filter> block
+    2. All other activities are just: <activity android:name=".ActivityName" />
+    3. If you add a new Activity Java file, you MUST add it here too
+
+    TO MODIFY:
+    - Adding a new page? Add: <activity android:name=".YourNewActivity" />
+    - Changing which page opens first? Move the <intent-filter> block to that activity
+    - Removing a page? Remove its <activity> line
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication">
+
+        <!-- PAGE 1: Login/Register — This is the LAUNCHER (opens first) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- PAGE 2: Event Management (Add/Update events) -->
+        <activity android:name=".EventManagementActivity" />
+
+        <!-- PAGE 3: Event Registration (Browse & register for events) -->
+        <activity android:name=".EventRegistrationActivity" />
+
+        <!-- PAGE 4: Summary (Show all registered event details) -->
+        <activity android:name=".SummaryActivity" />
+
+        <!--
+            ═══ If you need to add more pages during exam: ═══
+            <activity android:name=".YourNewActivity" />
+        -->
+
+    </application>
+
+</manifest>

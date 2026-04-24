@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PAGE 3 LAYOUT: Event Registration Screen
+    This is like your LAB8 Q1 MainActivity layout — a ListView to show items.
+
+    TO MODIFY:
+    - Change the title text
+    - The ListView is the key component — it shows all events
+    - Users tap on an event to register for it
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Page Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Upcoming Events"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Instruction for user -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="(Tap an event to register for it)"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"/>
+
+    <!--
+        ListView: Displays all events from the database.
+        layout_weight="1" makes it fill remaining space.
+        Same as your LAB8 Q1 listViewTasks.
+    -->
+    <ListView
+        android:id="@+id/listViewEvents"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Navigate to Summary (Page 4) -->
+    <Button
+        android:id="@+id/btnGoToSummary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="View Summary →"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

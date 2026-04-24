@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PAGE 2 LAYOUT: Event Management Screen
+    This is like your LAB8 AddTaskActivity layout but with more fields.
+
+    TO MODIFY:
+    - Change/add/remove EditTexts based on what fields the question asks for
+    - Each EditText needs a UNIQUE android:id (e.g., @+id/etWhatever)
+    - Match the id names in your Java code's findViewById()
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Page Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Event Management"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Serial Number (the unique identifier to find/update events) -->
+    <EditText
+        android:id="@+id/etSerialNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Event Serial No (unique)"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Event Name -->
+    <EditText
+        android:id="@+id/etEventName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Event Name"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Event Date -->
+    <EditText
+        android:id="@+id/etEventDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Event Date (e.g. 25/04/2026)"
+        android:layout_marginBottom="10dp"/>
+
+    <!--
+        BONUS: If you want a DatePicker instead of plain text (like LAB8 Q1):
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="10dp">
+            <Button android:id="@+id/btnPickDate" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Pick Date"/>
+            <TextView android:id="@+id/tvDate" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="Not Selected"
+                android:layout_marginStart="15dp" android:textSize="16sp"/>
+        </LinearLayout>
+
+        Then in Java, use DatePickerDialog like LAB8 Q1 AddTaskActivity.
+    -->
+
+    <!-- Event Time -->
+    <EditText
+        android:id="@+id/etEventTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Event Time (e.g. 10:00 AM)"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Event Location -->
+    <EditText
+        android:id="@+id/etEventLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Event Location"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Add Event Button -->
+    <Button
+        android:id="@+id/btnAddEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add New Event"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Update Event Button -->
+    <Button
+        android:id="@+id/btnUpdateEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Event (by Serial No)"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Navigate to Event Registration (Page 3) -->
+    <Button
+        android:id="@+id/btnGoToRegistration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to Event Registration →"/>
+
+</LinearLayout>

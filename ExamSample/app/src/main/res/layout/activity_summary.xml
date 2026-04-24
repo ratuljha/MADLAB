@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PAGE 4 LAYOUT: Summary Screen
+    Shows who is logged in + all events they registered for.
+
+    TO MODIFY:
+    - Add more TextViews if question wants more user info displayed
+    - The ListView shows all registered events fetched from DB
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <!-- Page Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registration Summary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- User Info (dynamically filled in Java) -->
+    <TextView
+        android:id="@+id/tvUserInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginBottom="15dp"/>
+
+    <!-- Section Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Events Registered:"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_marginBottom="5dp"/>
+
+    <!-- List of registered events -->
+    <ListView
+        android:id="@+id/listViewSummary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
