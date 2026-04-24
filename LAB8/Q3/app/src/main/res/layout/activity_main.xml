@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="16dp">
+
+    <Button android:id="@+id/btnAddReview" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:text="Write New Review" android:layout_marginBottom="10dp"/>
+
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Select a movie to view details:" android:textStyle="bold" android:layout_marginBottom="5dp"/>
+
+    <ListView android:id="@+id/listViewMovies" android:layout_width="match_parent"
+        android:layout_height="0dp" android:layout_weight="1" android:layout_marginBottom="15dp"/>
+
+    <TableLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:stretchColumns="1" android:background="#EEEEEE" android:padding="10dp">
+
+        <TableRow android:layout_marginBottom="5dp">
+            <TextView android:text="Movie Name: " android:textStyle="bold"/>
+            <TextView android:id="@+id/tvDispName" android:text="-" />
+        </TableRow>
+
+        <TableRow android:layout_marginBottom="5dp">
+            <TextView android:text="Release Year: " android:textStyle="bold"/>
+            <TextView android:id="@+id/tvDispYear" android:text="-" />
+        </TableRow>
+
+        <TableRow>
+            <TextView android:text="Rating (1-5): " android:textStyle="bold"/>
+            <TextView android:id="@+id/tvDispRating" android:text="-" />
+        </TableRow>
+
+    </TableLayout>
+
+</LinearLayout>
